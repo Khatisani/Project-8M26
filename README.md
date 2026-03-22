@@ -1,29 +1,47 @@
-# Project8M26: Triage Intelligence Engine (Python)
+# Project 8M26
 
-This is the logic core of Project 8M26. It handles spatial data processing and bio-medical triage calculations to provide survivors with immediate, actionable referrals.
+A Full-Stack Stealth Intelligence Tool for GBV Survivors in South Africa.
 
-## 🧬 Scientific Logic
-I designed this engine to prioritize the **Forensic & Biochemical Window**:
+Project 8M26 is a discreet decision-support application designed to bridge the gap between the "fog of trauma" and the South African legal/medical systems. By combining React/Next.js, Python (Flask), and Llama 3.3 AI, the platform provides survivors with immediate, anonymous, and GPS-guided paths to justice.
 
-- **Haversine Algorithm:** Calculates the real-world distance between the survivor and the nearest Thuthuzela Care Centre.
+## Live Access & Deployment
 
-- **Biomedical Triage:** Automatically flags cases within the **72-hour window** as "CRITICAL" to prioritize PEP (Post-Exposure Prophylaxis) and J88 forensic evidence collection.
+Production: link
+Backend API: link
 
-## 🛠️ Tech Stack
-- **Language:** Python 3.12
-- **Framework:** Flask
-- **Middleware:** Flask-CORS (for secure communication with the Next.js frontend)
-- **AI Model:** Llama 3.3-70B (Groq Cloud API)
-- **Security:** python-dotenv for credential management and Flask-CORS for secure frontend handshakes.
+Note on Hosting: The frontend is hosted on Vercel for high-speed edge delivery, while the Python Triage Engine is deployed via Railway to handle the Llama 3 API handshakes and geospatial processing.
 
 
-## 🚀 Setup
-1. `cd backend`
-2. `pip install flask flask-cors groq python-dotenv requests`
-3. `python3 app.py`
+## Features
+
+1. Stealth-First Design
+
+Camouflage UI: The app is designed with a minimalist aesthetic. A "Stealth Mode" (Flower Icon) allows users to instantly hide the assessment and replace it with a neutral wellness screen if their privacy is compromised.
+
+The Decoy Download: AI-generated legal summaries are saved as Flower decorations suggestions.txt. The top of the file contains actual flower care tips, hiding the legal statement further down to protect the user during a "phone search."
+
+2. Geospatial Triage Engine
+
+National Database: A custom Python backend cross-references 60+ TCCs and 1,100+ Police Stations across South Africa.
+
+Haversine Intelligence: Uses spherical geometry to calculate the absolute nearest point of safety based on the user's real-time GPS coordinates.
+
+3. AI Incident Summarization
+
+Llama 3.3 Integration: Leverages the Llama 3.3-70B model (via Groq) to transform raw questionnaire data into a structured, professional summary that references the Domestic Violence Act 116 of 1998.
 
 
-## 📡 API Endpoint
-- `POST /api/triage`: Receives GPS coordinates and incident timing; returns specialized clinic referrals.
+## Quick Start
+1. Backend 
+cd backend
+pip install flask flask-cors groq python-dotenv
+python3 app.py
 
-- `POST /api/summarize`: Leverages Llama 3 to transform questionnaire responses into a structured, professional summary for medical/legal use.
+2. Frontend
+npm install
+npm run dev
+
+
+## A Note on Data Privacy
+
+This project was built with a Zero-Storage Policy. No survivor data is stored in a database. All assessment logic exists only in the "Current Session" (React State) and is wiped the moment the browser tab is closed, ensuring the user leaves no digital footprint for an abuser to find.
