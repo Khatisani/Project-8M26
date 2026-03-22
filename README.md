@@ -7,9 +7,10 @@ Project 8M26 is a discreet decision-support application designed to bridge the g
 ## Live Access & Deployment
 
 Production: link
+<br> 
 Backend API: link
 
-Note on Hosting: The frontend is hosted on Vercel for high-speed edge delivery, while the Python Triage Engine is deployed via Railway to handle the Llama 3 API handshakes and geospatial processing.
+The frontend is hosted on Vercel for high-speed edge delivery, while the Python Triage Engine is deployed via Railway to handle the Llama 3 API handshakes and geospatial processing.
 
 
 ## Features
@@ -31,17 +32,6 @@ Haversine Intelligence: Uses spherical geometry to calculate the absolute neares
 Llama 3.3 Integration: Leverages the Llama 3.3-70B model (via Groq) to transform raw questionnaire data into a structured, professional summary that references the Domestic Violence Act 116 of 1998.
 
 
-## Quick Start
-1. Backend 
-cd backend
-pip install flask flask-cors groq python-dotenv
-python3 app.py
-
-2. Frontend
-npm install
-npm run dev
-
-
-## A Note on Data Privacy
+## Data Privacy
 
 This project was built with a Zero-Storage Policy. No survivor data is stored in a database. All assessment logic exists only in the "Current Session" (React State) and is wiped the moment the browser tab is closed, ensuring the user leaves no digital footprint for an abuser to find.
