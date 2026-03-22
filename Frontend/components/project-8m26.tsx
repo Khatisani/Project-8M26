@@ -55,7 +55,7 @@ const branchQuestions: BranchQuestions = {
       text: "What type of incident occurred?",
       options: [
         { label: "Non-consensual penetration (Rape)", value: "rape" },
-        { label: "Forced touching or kissing (Indecent Assault)", value: "assault" },
+        { label: "Forced touching or kissing", value: "assault" },
         { label: "Physical hitting or violence", value: "physical" },
       ],
     },

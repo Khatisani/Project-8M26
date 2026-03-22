@@ -253,7 +253,7 @@ const branchQuestions = {
                     value: "rape"
                 },
                 {
-                    label: "Forced touching or kissing (Indecent Assault)",
+                    label: "Forced touching or kissing",
                     value: "assault"
                 },
                 {
