@@ -18,7 +18,7 @@ I designed this engine to prioritize the **Forensic & Biochemical Window**:
 
 
 ## 🚀 Setup
-1. `cd backend`
+1. `cd Backend`
 2. `pip install flask flask-cors groq python-dotenv requests`
 3. `python3 app.py`
 
