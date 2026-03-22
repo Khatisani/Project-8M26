@@ -2,6 +2,8 @@
 
 This is the interactive client-side application for Project 8M26. It is designed to be a high-speed, discreet portal for South African survivors to access medical triage and legal documentation.
 
+**Production:** [https://project8m26.vercel.app]
+
 ## Tech Stack
 - **Framework:** Next.js 15 (App Router)
 - **Language:** TypeScript / React 19
