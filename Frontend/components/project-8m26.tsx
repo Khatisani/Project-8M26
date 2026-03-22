@@ -684,7 +684,6 @@ function ResultScreen({
       
       const data = await res.json();
       
-      // DECOY CONTENT: We put fake flower tips at the top to hide the real text
       const decoyHeader = "FLOWER ARRANGEMENT & DECORATION IDEAS 2026\n" +
                           "1. Use fresh water and trim stems at a 45-degree angle.\n" +
                           "2. Add a teaspoon of sugar to the vase for longevity.\n" +
@@ -695,7 +694,7 @@ function ResultScreen({
       
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'Flower decorations suggestions.txt'; // THE DECOY NAME
+      link.download = 'Flower decorations suggestions.txt'; 
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -741,10 +740,10 @@ function ResultScreen({
 
       {!isLoading && (
         <div className="space-y-3">
-          {/* THE GPS BUTTON (Existing) */}
+
           <GetHelpButton selectedBranch={selectedBranch} answers={answers} />
           
-          {/* THE NEW AI STEALTH BUTTON */}
+
           <Button 
             onClick={downloadStealthSummary} 
             disabled={isGeneratingAI}
@@ -781,7 +780,7 @@ function GetHelpButton({ selectedBranch, answers }: { selectedBranch: string | n
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         try {
-          const response = await fetch("http://127.0.0.1:5000/api/triage", {
+          const response = await fetch("https://project8m26.onrender.com", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
