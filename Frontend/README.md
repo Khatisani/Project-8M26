@@ -5,6 +5,7 @@ This is the interactive client-side application for Project 8M26. It is designed
 **Production:** [https://project8m26.vercel.app]
 
 ## Tech Stack
+- **AI Assistance:** v0 by Vercel 
 - **Framework:** Next.js 15 (App Router)
 - **Language:** TypeScript / React 19
 - **Styling:** Tailwind CSS
