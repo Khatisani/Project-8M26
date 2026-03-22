@@ -8,20 +8,12 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Project 8M26',
-  description: 'Confidential GBV support and safety assessment',
+  description: 'Seasonal gardening and floral arrangement guide.',
   generator: 'v0.app',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
+        url: '/icon.png',
         type: 'image/svg+xml',
       },
     ],
@@ -36,8 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">
+      <body 
+      className="font-sans antialiased min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
+        style={{ backgroundImage: "url('/background.jpg')" }}
+      >
+      <div className="min-h-screen bg-white/40 backdrop-blur-[2px]">
         {children}
+      </div>
         <Analytics />
       </body>
     </html>

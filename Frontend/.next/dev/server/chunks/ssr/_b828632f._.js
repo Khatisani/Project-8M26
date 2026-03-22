@@ -740,7 +740,7 @@ function HomeScreen({ onStartAssessment }) {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                         className: "text-balance text-2xl font-semibold text-foreground",
-                        children: "You are not alone"
+                        children: "Floral Design & Garden Tips"
                     }, void 0, false, {
                         fileName: "[project]/components/project-8m26.tsx",
                         lineNumber: 484,
@@ -748,7 +748,7 @@ function HomeScreen({ onStartAssessment }) {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "mt-2 text-pretty text-muted-foreground",
-                        children: "Confidential support is available. Tap the flower icon to hide this app quickly."
+                        children: "Seasonal gardening and floral arrangement guide. Tap the flower icon to hide this app quickly."
                     }, void 0, false, {
                         fileName: "[project]/components/project-8m26.tsx",
                         lineNumber: 487,
@@ -768,7 +768,7 @@ function HomeScreen({ onStartAssessment }) {
                     className: "h-20 gap-3 rounded-2xl bg-primary text-lg font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-[1.02] hover:bg-primary/90 active:scale-[0.98]",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            children: "Start Assessment"
+                            children: "Start"
                         }, void 0, false, {
                             fileName: "[project]/components/project-8m26.tsx",
                             lineNumber: 498,
@@ -1113,7 +1113,7 @@ function ResultScreen({ isLoading, actionPlan, showUrgentBanner, onGoHome, selec
     const downloadStealthSummary = async ()=>{
         setIsGeneratingAI(true);
         try {
-            const res = await fetch("http://127.0.0.1:5000/api/summarize", {
+            const res = await fetch("https://project8m26.onrender.com/api/summarize", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -1124,7 +1124,6 @@ function ResultScreen({ isLoading, actionPlan, showUrgentBanner, onGoHome, selec
                 })
             });
             const data = await res.json();
-            // DECOY CONTENT: We put fake flower tips at the top to hide the real text
             const decoyHeader = "FLOWER ARRANGEMENT & DECORATION IDEAS 2026\n" + "1. Use fresh water and trim stems at a 45-degree angle.\n" + "2. Add a teaspoon of sugar to the vase for longevity.\n" + "--------------------------------------------------\n\n";
             const blob = new Blob([
                 decoyHeader + data.summary
@@ -1134,7 +1133,7 @@ function ResultScreen({ isLoading, actionPlan, showUrgentBanner, onGoHome, selec
             const url = window.URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = url;
-            link.download = 'Flower decorations suggestions.txt'; // THE DECOY NAME
+            link.download = 'Flower decorations suggestions.txt';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -1154,7 +1153,7 @@ function ResultScreen({ isLoading, actionPlan, showUrgentBanner, onGoHome, selec
                         className: "h-5 w-5 text-destructive-foreground"
                     }, void 0, false, {
                         fileName: "[project]/components/project-8m26.tsx",
-                        lineNumber: 713,
+                        lineNumber: 712,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1163,13 +1162,13 @@ function ResultScreen({ isLoading, actionPlan, showUrgentBanner, onGoHome, selec
                         children: "Call 10111 Now"
                     }, void 0, false, {
                         fileName: "[project]/components/project-8m26.tsx",
-                        lineNumber: 714,
+                        lineNumber: 713,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/project-8m26.tsx",
-                lineNumber: 712,
+                lineNumber: 711,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1180,7 +1179,7 @@ function ResultScreen({ isLoading, actionPlan, showUrgentBanner, onGoHome, selec
                         children: "Your Action Plan"
                     }, void 0, false, {
                         fileName: "[project]/components/project-8m26.tsx",
-                        lineNumber: 721,
+                        lineNumber: 720,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1188,13 +1187,13 @@ function ResultScreen({ isLoading, actionPlan, showUrgentBanner, onGoHome, selec
                         children: "Confidential Guidance"
                     }, void 0, false, {
                         fileName: "[project]/components/project-8m26.tsx",
-                        lineNumber: 722,
+                        lineNumber: 721,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/project-8m26.tsx",
-                lineNumber: 720,
+                lineNumber: 719,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
@@ -1208,7 +1207,7 @@ function ResultScreen({ isLoading, actionPlan, showUrgentBanner, onGoHome, selec
                                 className: "h-8 w-8 animate-spin rounded-full border-4 border-secondary border-t-primary"
                             }, void 0, false, {
                                 fileName: "[project]/components/project-8m26.tsx",
-                                lineNumber: 731,
+                                lineNumber: 730,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1216,30 +1215,30 @@ function ResultScreen({ isLoading, actionPlan, showUrgentBanner, onGoHome, selec
                                 children: "Preparing your action plan..."
                             }, void 0, false, {
                                 fileName: "[project]/components/project-8m26.tsx",
-                                lineNumber: 732,
+                                lineNumber: 731,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/project-8m26.tsx",
-                        lineNumber: 730,
+                        lineNumber: 729,
                         columnNumber: 13
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "whitespace-pre-line text-sm leading-relaxed text-card-foreground",
                         children: actionPlan
                     }, void 0, false, {
                         fileName: "[project]/components/project-8m26.tsx",
-                        lineNumber: 735,
+                        lineNumber: 734,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/project-8m26.tsx",
-                    lineNumber: 728,
+                    lineNumber: 727,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/project-8m26.tsx",
-                lineNumber: 727,
+                lineNumber: 726,
                 columnNumber: 7
             }, this),
             !isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1250,7 +1249,7 @@ function ResultScreen({ isLoading, actionPlan, showUrgentBanner, onGoHome, selec
                         answers: answers
                     }, void 0, false, {
                         fileName: "[project]/components/project-8m26.tsx",
-                        lineNumber: 745,
+                        lineNumber: 744,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1263,20 +1262,20 @@ function ResultScreen({ isLoading, actionPlan, showUrgentBanner, onGoHome, selec
                                 className: `h-4 w-4 ${isGeneratingAI ? 'animate-spin' : ''}`
                             }, void 0, false, {
                                 fileName: "[project]/components/project-8m26.tsx",
-                                lineNumber: 754,
+                                lineNumber: 753,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: isGeneratingAI ? 'Processing Decoration Ideas...' : 'Save Decoration Ideas'
                             }, void 0, false, {
                                 fileName: "[project]/components/project-8m26.tsx",
-                                lineNumber: 755,
+                                lineNumber: 754,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/project-8m26.tsx",
-                        lineNumber: 748,
+                        lineNumber: 747,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1286,19 +1285,19 @@ function ResultScreen({ isLoading, actionPlan, showUrgentBanner, onGoHome, selec
                         children: "Return Home"
                     }, void 0, false, {
                         fileName: "[project]/components/project-8m26.tsx",
-                        lineNumber: 758,
+                        lineNumber: 757,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/project-8m26.tsx",
-                lineNumber: 743,
+                lineNumber: 742,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/project-8m26.tsx",
-        lineNumber: 710,
+        lineNumber: 709,
         columnNumber: 5
     }, this);
 }
@@ -1315,7 +1314,7 @@ function GetHelpButton({ selectedBranch, answers }) {
         setError(null);
         navigator.geolocation.getCurrentPosition(async (position)=>{
             try {
-                const response = await fetch("http://127.0.0.1:5000/api/triage", {
+                const response = await fetch("https://project8m26.onrender.com/api/triage", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -1355,20 +1354,20 @@ function GetHelpButton({ selectedBranch, answers }) {
                         className: `h-5 w-5 ${isLocating ? "animate-pulse" : ""}`
                     }, void 0, false, {
                         fileName: "[project]/components/project-8m26.tsx",
-                        lineNumber: 820,
+                        lineNumber: 819,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         children: isLocating ? "Pinpointing..." : "Find My Nearest Help Centre"
                     }, void 0, false, {
                         fileName: "[project]/components/project-8m26.tsx",
-                        lineNumber: 821,
+                        lineNumber: 820,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/project-8m26.tsx",
-                lineNumber: 814,
+                lineNumber: 813,
                 columnNumber: 7
             }, this),
             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1379,7 +1378,7 @@ function GetHelpButton({ selectedBranch, answers }) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/project-8m26.tsx",
-                lineNumber: 824,
+                lineNumber: 823,
                 columnNumber: 17
             }, this),
             triageData && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1393,7 +1392,7 @@ function GetHelpButton({ selectedBranch, answers }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/project-8m26.tsx",
-                        lineNumber: 828,
+                        lineNumber: 827,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1404,7 +1403,7 @@ function GetHelpButton({ selectedBranch, answers }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/project-8m26.tsx",
-                        lineNumber: 829,
+                        lineNumber: 828,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1416,24 +1415,24 @@ function GetHelpButton({ selectedBranch, answers }) {
                                 ]
                             }, i, true, {
                                 fileName: "[project]/components/project-8m26.tsx",
-                                lineNumber: 832,
+                                lineNumber: 831,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/components/project-8m26.tsx",
-                        lineNumber: 830,
+                        lineNumber: 829,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/project-8m26.tsx",
-                lineNumber: 827,
+                lineNumber: 826,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/project-8m26.tsx",
-        lineNumber: 813,
+        lineNumber: 812,
         columnNumber: 5
     }, this);
 }

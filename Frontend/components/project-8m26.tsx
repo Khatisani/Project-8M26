@@ -482,10 +482,10 @@ function HomeScreen({ onStartAssessment }: { onStartAssessment: () => void }) {
     <div className="flex w-full max-w-sm flex-col items-center gap-8">
       <div className="text-center">
         <h1 className="text-balance text-2xl font-semibold text-foreground">
-          You are not alone
+          Floral Design & Garden Tips
         </h1>
         <p className="mt-2 text-pretty text-muted-foreground">
-          Confidential support is available. Tap the flower icon to hide this app quickly.
+          Seasonal gardening and floral arrangement guide. Tap the flower icon to hide this app quickly.
         </p>
       </div>
 
@@ -495,7 +495,7 @@ function HomeScreen({ onStartAssessment }: { onStartAssessment: () => void }) {
           size="lg"
           className="h-20 gap-3 rounded-2xl bg-primary text-lg font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-[1.02] hover:bg-primary/90 active:scale-[0.98]"
         >
-          <span>Start Assessment</span>
+          <span>Start</span>
           <ArrowRight className="h-6 w-6" />
         </Button>
       </div>
@@ -676,7 +676,7 @@ function ResultScreen({
   const downloadStealthSummary = async () => {
     setIsGeneratingAI(true);
     try {
-      const res = await fetch("https://project8m26.onrender.com", {
+      const res = await fetch("https://project8m26.onrender.com/api/summarize", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ answers, branch: selectedBranch }),
@@ -780,7 +780,7 @@ function GetHelpButton({ selectedBranch, answers }: { selectedBranch: string | n
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         try {
-          const response = await fetch("https://project8m26.onrender.com", {
+          const response = await fetch("https://project8m26.onrender.com/api/triage", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
