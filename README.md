@@ -19,11 +19,11 @@ The frontend is hosted on Vercel for high-speed edge delivery, while the Python 
 
 Camouflage UI: The app is designed with a minimalist aesthetic. A "Stealth Mode" (Flower Icon) allows users to instantly hide the assessment and replace it with a neutral wellness screen if their privacy is compromised.
 
-The Decoy Download: AI-generated legal summaries are saved as Flower decorations suggestions.txt. The top of the file contains actual flower care tips, hiding the legal statement further down to protect the user during a "phone search."
+The Decoy Download: AI-generated legal summaries are saved as Flower decorations suggestions.txt. The top of the file contains actual flower care tips, hiding the legal statement further down to protect the user during a phone search.
 
 2. Geospatial Triage Engine
 
-National Database: A custom Python backend cross-references 60+ TCCs and 1,100+ Police Stations across South Africa.
+National Database: A custom Python backend cross-references Thuthuzela Care Centre and Police Stations across South Africa.
 
 Haversine Intelligence: Uses spherical geometry to calculate the absolute nearest point of safety based on the user's real-time GPS coordinates.
 
