@@ -36,11 +36,6 @@ Filename: Flower decorations suggestions.txt
 The file is prepended with 200+ characters of actual floral care tips to hide the legal statement from casual inspection.
 
 ## Setup
-Install dependencies:
-
-
 1. `cd Frontend`
 2. `npm install`
 3. `npm run dev`
-
-Environment Sync: Ensure the fetch calls in project-8m26.tsx are pointing to your local Python server (usually http://127.0.0.1:5000).
